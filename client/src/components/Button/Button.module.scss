@@ -1,0 +1,5 @@
+@import "../../commonStyles/common.scss";
+
+.button {
+  @include buttons(198px, $green, 10px 0, $white, $font)
+}

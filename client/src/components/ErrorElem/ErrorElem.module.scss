@@ -1,0 +1,17 @@
+@import "../../commonStyles/common.scss";
+
+.error_wrap {
+  padding: 20px 30px;
+  background: $redBg;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  max-width: 690px;
+  .title {
+    @include fontStyle(32px, 1.1, $red, $font, 700);
+    margin-bottom: 20px;
+  }
+
+  .descrp {
+    @include fontStyle(17px, 1.1, $blackSecondary, $font, 700);
+  }
+}

@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { v4 } = require('uuid');
-var cors = require('cors');
+const cors = require('cors');
 
 const app = express();
 const port = 3001;
@@ -15,15 +15,17 @@ const vacancies = [
   {
     id: '9052e23a-bb58-4b24-9460-dce5506e1b19',
     name: 'First vacancy in the city',
-    city: '34',
+    city: 'Днепр',
     price: 1000,
+    address: '',
     priceComment: 'Paid in USD',
     createdAt: Date.now(),
   },
   {
     id: 'e9cc6af9-0629-4641-a401-5638855a5057',
     name: 'Kyiv vacancy',
-    city: '39',
+    city: 'Киев',
+    address: 'Академіка Бутлерова, 1',
     price: { from: 1000, to: 1400 },
     createdAt: Date.now(),
   },
@@ -110,7 +112,10 @@ app.delete('/vacancy/:id', (req, res) => {
 
   vacancies.splice(index, 1);
 
-  res.status(200).send();
+  res.status(200).json({
+    status: true,
+    msg: 'deleted'
+  });;
 });
 
 app.listen(port, () => {

@@ -1,0 +1,5 @@
+@import "../../commonStyles/common.scss";
+
+.title {
+  @include fontStyle(32px, 1.1, $black, $font, 700);
+}

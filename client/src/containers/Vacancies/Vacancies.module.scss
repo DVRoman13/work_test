@@ -1,0 +1,33 @@
+@import "../../commonStyles/common.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+    p {
+      margin-bottom: 20px;
+    }
+
+    button {
+      max-width: 100%;
+    }
+  }
+}
+
+.button_wrapp {
+  @media only screen and (max-width: $mobile) {
+    padding: 0 20px;
+    button {
+      max-width: 100%;
+    }
+  }
+}
+
+.vacancies_wrapp {
+  margin-bottom: 20px;
+}

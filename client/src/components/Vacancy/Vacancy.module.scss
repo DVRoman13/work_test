@@ -1,0 +1,75 @@
+@import "../../commonStyles/common.scss";
+
+.Vacancy {
+  padding: 30px;
+  border: 1px solid #E9EBED;
+  position: relative;
+  @media only screen and (max-width: $mobile) {
+    padding: 30px 20px;
+  }
+  .title {
+    @include fontStyle(24px, 1.1, $blue, $font, 700);
+    margin-bottom: 20px;
+    @media only screen and (max-width: $mobile) {
+      font-size: 19px;
+    }
+  }
+
+  .salary {
+    @include fontStyle(17px, 1.1, $black, $font, 700);
+    margin-bottom: 10px;
+  }
+
+  .city {
+    @include fontStyle(17px, 1.1, $black, $font, 400);
+  }
+
+  .action_block {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    @media only screen and (max-width: $mobile) {
+      bottom: 0;
+      right: 30px;
+      top: 30px;
+    }
+    p {
+      @include fontStyle(17px, 1.1, $blue, $font, 700);
+      position: relative;
+      .arrow {
+        border: solid $blue;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 2px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        position: absolute;
+        top: 6px;
+        right: -12px;
+      }
+    }
+
+    &_dropdown {
+      position: absolute;
+      right: 0;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      z-index: 10;
+      background: #fff;
+      p {
+        background: #fff;
+        @include fontStyle(17px, 1.1, $blue, $font, 400);
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &_btn {
+      cursor: pointer;
+    }
+  }
+}
